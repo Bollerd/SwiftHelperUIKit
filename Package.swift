@@ -4,20 +4,23 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftHelperUIKit",
+    name: "SwiftHelperUIKitExtensions",
+    platforms: [
+        .iOS("16.0")
+    ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "SwiftHelperUIKit",
-            targets: ["SwiftHelperUIKit"]),
+            name: "SwiftHelperUIKitExtensions",
+            targets: ["SwiftHelperUIKitExtensions"]),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "SwiftHelperUIKit"),
+            name: "SwiftHelperUIKitExtensions"),
         .testTarget(
-            name: "SwiftHelperUIKitTests",
-            dependencies: ["SwiftHelperUIKit"]),
+            name: "SwiftHelperUIKitExtensionsTests",
+            dependencies: ["SwiftHelperUIKitExtensions"]),
     ]
 )
